@@ -9,7 +9,7 @@ export default defineConfig({
       // 使用 KaTeX 解析数学公式
       md.use(require('markdown-it-katex'));
     }
-  }
+  },
   base: "/Linux-web/",
   title: "学习资料共享网站",
   description: "A Blog Site",
