@@ -2,7 +2,14 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/Linux-web/",
+markdown: {
+    // 使用自定义的 Markdown 解析器
+    config: (md) => {
+      // 使用 KaTeX 解析数学公式
+      md.use(require('markdown-it-katex'));
+    }
+  },  
+base: "/Linux-web/",
   title: "学习资料共享网站",
   description: "A Blog Site",
   themeConfig: {
